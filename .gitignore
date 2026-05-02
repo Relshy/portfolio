@@ -1,0 +1,10 @@
+# Claude Code internal
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+
+# Unrelated files
+Sky_Garden_Expansions.pdf
+sky_garden_expansions.py
