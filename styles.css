@@ -1,0 +1,271 @@
+:root {
+  --bg: #ffffff;
+  --text: #080808;
+  --line: #b9b9b9;
+  --dot: #b7b7b7;
+  --button-bg: #fbfbfb;
+  --button-border: #d7d7d7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--bg);
+}
+
+body {
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.22;
+  overflow-x: hidden;
+}
+
+.page {
+  width: min(582px, calc(100vw - 34px));
+  margin: 0 auto;
+  padding: 17px 0 78px;
+}
+
+.avatar {
+  display: block;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 31px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.tree {
+  margin-left: 10px;
+}
+
+.node {
+  position: relative;
+}
+
+.root-node {
+  margin-left: 0;
+}
+
+.node-copy {
+  position: relative;
+}
+
+.node-copy::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: -10px;
+  width: 39px;
+  height: calc(100% - 10px);
+  border-left: 2px solid var(--line);
+  border-bottom: 2px solid var(--line);
+  border-radius: 0 0 0 17px;
+  pointer-events: none;
+}
+
+.root-node > .node-copy::before {
+  top: 10px;
+  height: calc(100% - 6px);
+}
+
+.children .children .node-copy::before {
+  top: 22px;
+  height: calc(100% - 17px);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  margin-bottom: 2px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+h2 {
+  margin-bottom: 2px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+h3 {
+  margin-bottom: 2px;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+}
+
+p {
+  max-width: 548px;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+}
+
+.root-node > .node-copy > p {
+  width: 620px;
+  max-width: none;
+}
+
+.children .children .node-copy > p {
+  max-width: 495px;
+}
+
+.children {
+  position: relative;
+  margin-top: 22px;
+  margin-left: 5px;
+  padding-left: 20px;
+}
+
+.children .children {
+  margin-top: 17px;
+}
+
+.children::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  border-left: 2px solid var(--line);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.branch-main::before {
+  top: -16px;
+  bottom: 22px;
+}
+
+.branch-experience::before {
+  top: -13px;
+  bottom: 27px;
+}
+
+.branch-projects::before {
+  top: -13px;
+  bottom: 18px;
+}
+
+.children > .node {
+  padding-bottom: 18px;
+}
+
+.children > .node:last-child {
+  padding-bottom: 0;
+}
+
+.children > .node::before {
+  content: "";
+  position: absolute;
+  left: -18px;
+  top: 14px;
+  width: 10px;
+  height: 2px;
+  background: var(--line);
+  transform: rotate(38deg);
+  transform-origin: left center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.children > .node::after {
+  content: "";
+  position: absolute;
+  left: -25px;
+  top: 10px;
+  width: 7px;
+  height: 7px;
+  border: 2px solid var(--dot);
+  border-radius: 50%;
+  background: var(--bg);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.children .children > .node::before {
+  top: 22px;
+}
+
+.children .children > .node::after {
+  top: 18px;
+}
+
+.title-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 21px;
+}
+
+.title-line h2 {
+  margin-bottom: 0;
+}
+
+.details-button {
+  appearance: none;
+  min-width: 88px;
+  height: 22px;
+  padding: 1px 10px 2px;
+  border: 1px solid var(--button-border);
+  border-radius: 999px;
+  background: var(--button-bg);
+  color: var(--text);
+  font: 13px/17px Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.details-button:hover,
+.details-button:focus-visible {
+  background: #f2f2f2;
+}
+
+.details-button:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 2px;
+}
+
+.details-button:active {
+  transform: translateY(1px);
+}
+
+.contact-extra {
+  display: none;
+  margin-top: 3px;
+}
+
+.contact-node[data-expanded="true"] .contact-extra {
+  display: block;
+}
+
+@media (max-width: 680px) {
+  .page {
+    width: min(590px, calc(100vw - 24px));
+    padding-top: 15px;
+  }
+
+  .tree {
+    margin-left: 4px;
+  }
+
+  p {
+    max-width: 100%;
+  }
+
+  .root-node > .node-copy > p {
+    width: auto;
+    max-width: 100%;
+  }
+}
