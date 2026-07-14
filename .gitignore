@@ -1,0 +1,11 @@
+# Local tooling / editor state (not part of the site)
+.claude/
+.codex/
+.mcp.json
+
+# Local scratch and unrelated artifacts kept out of the published repo
+build/
+cart.html
+Sky_Garden_Expansions.pdf
+sky_garden_expansions.py
+ashborne_staff_application_form.gs
