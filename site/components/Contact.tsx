@@ -71,7 +71,7 @@ function OrderTips() {
                 className="grid gap-1.5 sm:grid-cols-[3rem_1fr]"
               >
                 <span className="pt-0.5 font-mono text-sm text-ice/80">
-                  {String(i + 1).padStart(2, "0")}
+                  {i + 1}
                 </span>
                 <div>
                   <p className="text-sm font-semibold tracking-tight">

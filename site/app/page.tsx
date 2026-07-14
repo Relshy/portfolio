@@ -55,7 +55,6 @@ export default function Home() {
               align="left"
               eyebrow="Services"
               title="What I build"
-              subtitle="The short version. Each service has its own page with details."
             />
             <Reveal delay={0.1}>
               <SectionLink href="/services" label="All services" />

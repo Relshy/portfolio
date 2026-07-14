@@ -9,7 +9,7 @@ import { SectionHeading } from "./SectionHeading";
 const steps = [
   {
     title: "Scope",
-    description: `We define the system, requirements, timeline, and expected behavior. We agree on a fixed price, and a ${site.deposit} deposit starts the work (${site.largeDeposit} for orders over ${site.largeOrderThreshold}).`,
+    description: `We define the system, requirements, timeline, and expected behavior. We agree on a fixed price, and a ${site.deposit} deposit starts the work.`,
   },
   {
     title: "Build",
@@ -45,7 +45,7 @@ const item: Variants = {
 function StepNode({ index }: { index: number }) {
   return (
     <span className="relative z-10 grid h-10 w-10 place-items-center rounded-full border border-white/[0.12] bg-[#0b0b0d] text-sm font-medium text-ice shadow-[0_0_24px_-6px_rgba(147,197,253,0.35)]">
-      {String(index + 1).padStart(2, "0")}
+      {index + 1}
     </span>
   );
 }
@@ -146,10 +146,9 @@ export function Process() {
 
         <div className="mx-auto mt-16 max-w-2xl border-t border-white/[0.07] pt-8 text-center lg:mt-20">
           <p className="text-sm/6 text-mute">
-            Payment in short: {site.deposit} deposit up front (
-            {site.largeDeposit} if the order is over {site.largeOrderThreshold}
-            ), the rest at delivery. Minimum commission is {site.minCommission}{" "}
-            ({site.paymentMethods}).
+            Payment in short: {site.deposit} deposit up front, the rest at
+            delivery. Minimum commission is {site.minCommission} (
+            {site.paymentMethods}).
           </p>
           <p className="mt-2 text-sm/6 text-mute">
             The full details are in the{" "}

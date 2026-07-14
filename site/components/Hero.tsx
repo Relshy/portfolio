@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
-import { site } from "@/lib/site";
 
 const container: Variants = {
   hidden: {},
@@ -18,13 +17,6 @@ const item: Variants = {
     transition: { duration: 0.75, ease: [0.21, 0.47, 0.32, 0.98] },
   },
 };
-
-const trustSignals = [
-  "Strict Luau",
-  "ProfileStore",
-  "Rojo workflows",
-  "Monetization systems",
-];
 
 function HeroBackdrop() {
   return (
@@ -127,19 +119,9 @@ export function Hero() {
           />
         </motion.div>
 
-        <motion.p variants={item} className="mt-6">
-          <span className="pill gap-2 py-1.5 pl-3 pr-3.5 text-[0.8125rem]">
-            <span className="relative flex h-1.5 w-1.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-300/50" />
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-sky-300" />
-            </span>
-            {site.status}
-          </span>
-        </motion.p>
-
         <motion.h1
           variants={item}
-          className="mx-auto mt-7 max-w-4xl bg-gradient-to-b from-white to-white/70 bg-clip-text text-5xl font-semibold tracking-tight text-balance text-transparent sm:text-6xl md:text-7xl"
+          className="mx-auto mt-8 max-w-4xl bg-gradient-to-b from-white to-white/70 bg-clip-text text-5xl font-semibold tracking-tight text-balance text-transparent sm:text-6xl md:text-7xl"
         >
           Roblox development,{" "}
           <span className="bg-gradient-to-r from-sky-200 to-violet-300 bg-clip-text text-transparent">
@@ -151,9 +133,10 @@ export function Hero() {
           variants={item}
           className="mx-auto mt-6 max-w-2xl text-base/7 text-mute text-pretty sm:text-lg/8"
         >
-          I build gameplay systems for Roblox: combat, economies, progression,
-          backend tools, and full custom commissions. Everything runs
-          server-side and is written to survive real players.
+          I build robust Roblox gameplay systems, including combat, economies,
+          progression, backend tools, and fully custom commissions. Everything
+          is server-authoritative and designed to perform reliably under real
+          player conditions.
         </motion.p>
 
         <motion.div
@@ -168,21 +151,6 @@ export function Hero() {
           </Link>
         </motion.div>
 
-        <motion.ul
-          variants={item}
-          className="mx-auto mt-14 flex max-w-3xl flex-wrap items-center justify-center gap-x-3 gap-y-2 text-sm text-mute"
-        >
-          {trustSignals.map((signal, i) => (
-            <li key={signal} className="flex items-center gap-3">
-              {i > 0 && (
-                <span aria-hidden className="text-white/25">
-                  ·
-                </span>
-              )}
-              {signal}
-            </li>
-          ))}
-        </motion.ul>
       </motion.div>
     </section>
   );

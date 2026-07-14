@@ -4,7 +4,7 @@ import { Work } from "@/components/Work";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Roblox projects and client systems by Relshy: Sky Garden, commissioned client work, and shipped games.",
+    "Roblox games Relshy has worked on, including RNG Battles, Iron Soul: Dungeon, and Merge Vs Mobs. Client work available on request.",
 };
 
 export default function WorkPage() {

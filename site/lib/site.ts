@@ -13,10 +13,7 @@ export const site = {
   minCommission: "5k Robux or $30 USD",
   paymentMethods: "PayPal or crypto",
   // Deposit taken before work starts; referenced on /process and /terms.
-  deposit: "50%",
-  // Larger orders take a smaller deposit.
-  largeDeposit: "20%",
-  largeOrderThreshold: "20k Robux or $100",
+  deposit: "20%",
   // Hero badge text — change it when you close commissions
   // (e.g. "Booked until August").
   status: "Open for commissions",

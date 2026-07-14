@@ -27,7 +27,7 @@ const sections = [
   {
     title: "Deposit",
     paragraphs: [
-      `Work starts after a ${site.deposit} deposit. For larger orders, over ${site.largeOrderThreshold}, the deposit is ${site.largeDeposit} instead. The rest is due at delivery.`,
+      `Work starts after a ${site.deposit} deposit. The rest is due at delivery.`,
       "The deposit covers the time I put in, so it isn't returned if you cancel a project I've already started. See refunds below.",
     ],
   },
