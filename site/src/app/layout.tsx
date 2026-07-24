@@ -20,7 +20,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Relshy",
     description: "​",
-    siteName: "Relshy",
     type: "website",
   },
   twitter: {
