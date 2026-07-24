@@ -1,0 +1,45 @@
+:root {
+  --content-width: 1048px;
+  --content-width-narrow: 900px;
+  --site-padding: 0;
+
+  --radius-small: 5px;
+  --radius-large: 25px;
+  --radius-circle: 70px;
+  --pill-radius: 5px 35px 35px 5px / 5px 50% 50% 5px;
+
+  --font-weight-1: 300;
+  --font-weight-2: 400;
+
+  --ink: #4f3c42;
+  --ink-soft: #5d474e;
+  --white: #f2f2f2;
+  --grey: #bdbdbd;
+  --red: #ad4646;
+  --red-deep: #9a3d3d;
+  --red-light: #ffdede;
+  --clay: #bd704b;
+  --clay-deep: #a85f3d;
+  --gold: #f2c14e;
+  --grey-transparent: rgba(82, 87, 95, 0.9);
+  --line: rgba(79, 60, 66, 0.15);
+}
+
+:root {
+  font-family: iosevka, Hack, Consolas, monospace;
+  font-weight: 300;
+  font-kerning: normal;
+  font-size: 20px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--ink);
+}
+
+::selection {
+  background: var(--clay);
+  color: var(--white);
+}

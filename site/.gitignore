@@ -1,13 +1,8 @@
-node_modules/
-.next/
-out/
-next-env.d.ts
+node_modules
+.next
+out
+.env*.local
+npm-debug.log*
+.DS_Store
 *.tsbuildinfo
-premium-portfolio/
-
-# Stray non-site files that drifted into this folder
-*.lua
-*.luau
-output/
-tools/
-tmp_roblox_import/
+next-env.d.ts
