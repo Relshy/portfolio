@@ -19,14 +19,14 @@ export const metadata: Metadata = {
   description,
   openGraph: {
     title: "Relshy",
-    description,
+    description: "​",
     siteName: "Relshy",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Relshy",
-    description,
+    description: "​",
   },
 }
 
