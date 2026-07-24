@@ -1,12 +1,11 @@
-import React from "react"
 import styled, { css } from "styled-components"
 import { site } from "@/data/site"
 import { IconsId } from "@/types/icons"
 import Icon from "./Icon"
 
-const socialLinks: [IconsId, string | null, string][] = [
+const socialLinks: [IconsId, string, string][] = [
   ["github", site.github, "GitHub"],
-  ["discord", null, `Discord — ${site.discordHandle}`],
+  ["discord", site.discord, `Discord — ${site.discordHandle}`],
   ["email", `mailto:${site.email}`, "Email"],
 ]
 
@@ -24,8 +23,7 @@ const StyledSocialLinks = styled.div<{ $variation?: ColorVariation }>`
   flex-wrap: wrap;
   font-size: 1.5rem;
 
-  a,
-  span {
+  a {
     display: inline-flex;
     padding: 0.6rem 0.45rem 0 0.5rem;
   }
@@ -46,24 +44,18 @@ export default function SocialLinks({
 }) {
   return (
     <StyledSocialLinks className={className} $variation={variation}>
-      {socialLinks.map(([icon, url, label]) =>
-        url ? (
-          <a
-            href={url}
-            key={icon}
-            target={url.startsWith("mailto:") ? undefined : "_blank"}
-            rel={url.startsWith("mailto:") ? undefined : "noopener noreferrer"}
-            aria-label={label}
-            title={label}
-          >
-            <Icon icon={icon} />
-          </a>
-        ) : (
-          <span key={icon} aria-label={label} title={label}>
-            <Icon icon={icon} />
-          </span>
-        )
-      )}
+      {socialLinks.map(([icon, url, label]) => (
+        <a
+          href={url}
+          key={icon}
+          target={url.startsWith("mailto:") ? undefined : "_blank"}
+          rel={url.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+          aria-label={label}
+          title={label}
+        >
+          <Icon icon={icon} />
+        </a>
+      ))}
     </StyledSocialLinks>
   )
 }

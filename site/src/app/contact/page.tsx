@@ -43,17 +43,6 @@ const ContactMethod = styled.a`
   }
 `
 
-const StaticMethod = styled.span`
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: rgba(0, 0, 0, 0.15);
-  border-radius: 999px;
-  padding: 0.6rem 1.3rem;
-  font-size: 1.05rem;
-  color: white;
-`
-
 export default function Contact() {
   return (
     <ContentSection variation="red" placement="floating">
@@ -76,10 +65,14 @@ export default function Contact() {
               <Icon icon="github" />
               <span>{site.githubHandle}</span>
             </ContactMethod>
-            <StaticMethod>
+            <ContactMethod
+              href={site.discord}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Icon icon="discord" />
               <span>Discord &mdash; {site.discordHandle}</span>
-            </StaticMethod>
+            </ContactMethod>
           </ContactMethods>
         </article>
       </Centered>
