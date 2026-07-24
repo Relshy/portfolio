@@ -10,10 +10,24 @@ import { Baloo_2 } from "next/font/google"
 import "./globals.css"
 import "./theme.css"
 
+const description =
+  "Relshy — Roblox systems developer. Gameplay systems, backend tools, and commissions."
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://relshy.nl"),
   title: { template: "%s | Relshy", default: "Relshy" },
-  description:
-    "Relshy — Roblox systems developer. Gameplay systems, backend tools, and commissions.",
+  description,
+  openGraph: {
+    title: "Relshy",
+    description,
+    siteName: "Relshy",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Relshy",
+    description,
+  },
 }
 
 export const viewport: Viewport = {
