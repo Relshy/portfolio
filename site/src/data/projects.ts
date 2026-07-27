@@ -54,4 +54,14 @@ export const projects: Project[] = [
     video: "/assets/videos/QueueSystem.mp4",
     poster: "/assets/videos/posters/QueueSystem.jpg",
   },
+  {
+    scope: "personal/",
+    name: "3RD Person car system",
+    slug: "car-system",
+    year: "2026",
+    description:
+      "A car system featuring both automatic and manual gear shifting along with a drifting system.",
+    video: "/assets/videos/CarSystem.mp4",
+    poster: "/assets/videos/posters/CarSystem.jpg",
+  },
 ]

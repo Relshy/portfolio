@@ -35,9 +35,15 @@ export default function Home() {
           each system in action.
         </ResponsiveParagraph>
         <ResponsiveParagraph>
-          Two things live on this site: my <b>past work</b> and my{" "}
-          <b>commission sheet</b>. If you want something built for your game,
-          the commissions page has pricing and the fastest way to reach me.
+          Browse my <b>previous work</b> to see the systems I&apos;ve built
+          and how they function in-game. Looking to hire me? Visit the{" "}
+          <b>commissions page</b> for pricing, project information, and the
+          best way to get in touch.
+        </ResponsiveParagraph>
+        <ResponsiveParagraph>
+          If you&apos;re interested in working with me the button below will
+          take you to the page where its explained on how to order. I look
+          forward to working with you!
         </ResponsiveParagraph>
 
         <CallToActionContainer>
